@@ -1,38 +1,115 @@
-.App {
-  text-align: center;
+.reportWrapper{
+  padding: 30px;
+  max-width: 842px;
+}
+.reportHeader {
+  padding-bottom: 10px;
+  border-bottom: 3px solid #2FA1FC;
+}
+.reportFooter{
+  border-top: 3px solid #2FA1FC;
+  position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.reportHeader h3{
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+}
+.reportHeader strong {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+.reportFooter h3{
+  display: inline-block;
+  width: 50%;
+  margin: 0;
+}
+.reportFooter strong {
+  display: inline-block;
+  width: 50%;
+  text-align: right;
+}
+.clear{
+  clear: both;
+}
+.chart-head{
+  display: inline-block;
+}
+.chrtBox{
+  background: lightgrey;
+  border-radius: 20px 20px 20px 20px;
+}
+.chrtBox-body{
+  background: lightgrey;
+}
+.chrtBox-head{
+  background: #E8EEFB;
+  border-radius: 20px 20px 0px 0px;
+  padding: 10px;
+  color: #2FA1FC;
+  font-weight: bold;
+}
+.h-bar{
+  display: inline-block;
+    border: 1px solid #2FA1FC;
+    width: 91%;
+    margin-left: 10px;
+    margin-top: -2px !important;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* .hidden {
+  position: fixed;
+  top: -1000px;
+} */
+.hidden{
+  display: none !important;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.chaer-name{
+  background: lightgrey !important;
+  min-height: 400px;
+  width: 5%;
+  float: left;
+  height: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.chaer-name .text{transform: rotate(270deg);margin-top: 150px;}
+.chart-container{
+  background-color: white;
+  width: 90%;
+  float: left !important;
+  padding: 0 10px;
+}
+.button-container-div {
+  width: 100%;
+  height: 600px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
-
-.App-link {
-  color: #61dafb;
+.button-container-div button {
+    height: 40px;
+    width: 70px;
+    background-color: black;
+    color: white;
+    font-weight: bold !important;
+    cursor: pointer !important;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media print {
+  @page {
+    padding: 20px 50px 20px 50px;
+    maxWidth: 842px;
+    /* size: A4; */
+    /* margin: 20mm; */
   }
-  to {
-    transform: rotate(360deg);
+  .reportWrapper{
+    padding: 30px;
+    max-width: 842px;
+  }
+  .hidden{
+    display: block !important;
+    height:100%;
+    overflow:hidden;
   }
 }
